@@ -51,7 +51,7 @@ dnf -y install rpmfusion-free-release-tainted && dnf -y install libdvdcss && dnf
 dnf -y --repo=rpmfusion-nonfree-tainted install "*-firmware"
 
 # Removing bloat
-dnf remove $(grep "^[^#]" bloatware)
+dnf -y remove $(grep "^[^#]" bloatware)
 
 # install wanted apps
 echo -e "Installing applications ..."
